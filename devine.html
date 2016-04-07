@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // Je demande à l'ordinateur de choisir au hasard un chiffre entre 0 et 9 à l'entier inférieur.
+    // Et je stocke ce chiffre dans la variable choixOrdi.
+    var choixOrdi = Math.floor(Math.random()*10);
+    // Je dis à l'ordinateur d'ouvrir une fenêtre et de poser une question où l'utilisateur rentrera une réponse.
+    // La réponse de l'utilisateur est stockée dans la variable reponse.
+    var reponse = prompt("choisis un nombre entre 0 et 9");
+// reponse=Number(reponse) force à enregistrer réponse sous forme numérique
+// Si le nombre réponse est inférieur à choixOrdi alors l'ordi ouvre une fenêtre et lui dit "trop petit".
+// Ensuite l'ordi va ouvrir une nouvelle fenêtre et proposer à l'utilisateur de retentez sa chance et l'utilisateur entrera une nouvelle réponse.
+//  Si la reponse1 de l'utilisateur est différente du choixOrdi, alors il ouvrira une fenêtre et marquera "faux".
+//  Ou si la reponse1 de l'utilisateur est égale au choixOrdi, alors il ouvrira une fenêtre et écrira "bravo".
+    if(Number(reponse) < choixOrdi)
+    {
+      alert("trop petit");
+      var reponse1 = prompt("tu as une deuxième chance");
+      if(reponse1 !== choixOrdi)
+      {
+        alert("faux");
+      }
+      else
+      {
+          alert("bravo");
+      }
+    }
+    // Si le nombre réponse de l'utilisateur est supérieur au choixOrdi, alors il va ouvrir une fenêtre et écrire"trop grand".
+    // l'ordi ouvrira ensuite une nouvelle fenêtre en disant à l'utilisateur qu'il a une 2ème chance et il entrera une nouvelle réponse.
+    // Si la reponse2 est différente de choixOrdi alors l'ordi ouvrira une fenêtre ou c'est écrit "c'est faux".
+    // Ou si la réponse2 est égale au choixOrdi alors l'ordi ouvrira une fenêtre ou c'est écrit "bravo".
+    else if(Number(reponse) > choixOrdi)
+    {
+      alert("trop grand");
+      var reponse2 = prompt("tu as une deuxième chance");
+      if(reponse2 !== choixOrdi)
+      {
+        alert("faux");
+      }
+      else
+        {
+          alert("bravo");
+        }
+    }
+    // Si l'utilisateur donne la bonne réponse tout de suite alors l'ordi ouvrira une fenêtre ou il sera écrit "bravo".
+    else
+    {
+      alert("bravo");
+    }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+  // Consigne : On demande à l'utilisateur de choisir une opération entre + - / *
+  // Puis on lui demande d'entrer un premier chiffre
+  // Puis un deuxième
+  // Et l'ordianteur doit afficher le résultat.
+
+   var operation = prompt("Choisissez une opération entre + - / * ");
+   var chiffre1 = prompt("Choisissez un premier chiffre");
+   var chiffre2 = prompt("Choisissez un deuxième chiffre");
+  //  J'appelle une variable resultat qui me donnera le résultat de l'opération des 2 chiffres.
+   var resultat;
+  //  Je force l'ordinateur à lui dire que chiffre1 et chiffre2 sont des nombres.
+   chiffre1 = Number(chiffre1);
+   chiffre2 = Number(chiffre2);
+
+   if(operation === "+")
+   {
+    //  console.log('+');
+     resultat= chiffre1 + chiffre2;
+   }
+   else if(operation === "-")
+   {
+     resultat= chiffre1 - chiffre2;
+    //  console.log("resultat : " + resultat);
+   }
+   else if(operation === "*")
+   {
+    //  console.log('*');
+     resultat= chiffre1 * chiffre2;
+   }
+   else if(operation === "/")
+   {
+    //  console.log('/');
+     resultat= chiffre1 / chiffre2;
+   }
+
+  //  console.log("resultat bis : " + resultat);
+   alert("Le résultat est : " + resultat);
+    // console.log("Le résultat est : " + resultat + " " + chiffre1 + " " + chiffre2 + " " + operation );
+
+
+    </script>
+  </body>
+</html>
